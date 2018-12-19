@@ -3,6 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^3.6.1",
+    "@progress/kendo-react-buttons": "^2.4.0",
+    "@progress/kendo-react-conversational-ui": "^2.4.0",
+    "@progress/kendo-react-intl": "^2.4.0",
+    "aws-api-gateway-client": "^0.2.16",
+    "aws-sdk": "^2.376.0",
+    "axios": "^0.18.0",
+    "compressorjs": "^1.0.3",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1"
