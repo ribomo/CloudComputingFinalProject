@@ -41,15 +41,7 @@ class Chat extends Component {
             messages: [
                 {
                     response: true,
-                    text: "How can I help you"
-                },
-                {
-                    response: false,
-                    text: "Nihao"
-                },
-                {
-                    response: true,
-                    text: "Yooo"
+                    text: "Hello! I am an image chat bot, how can I help you?"
                 }
             ],
             inputText: '',
@@ -63,7 +55,12 @@ class Chat extends Component {
     }
     updataRecResult = (theFile, data) =>{
         let labels = data.Labels
-        console.log(data)
+        // console.log(data)
+        let img = <img
+            src={URL.createObjectURL(theFile)}
+            style={ {width:"100%"} }
+        />
+        this.addMsg(img)
         this.setState({
             labels: labels,
             messages: this.state.messages.concat(
@@ -73,11 +70,11 @@ class Chat extends Component {
                 }]
             )
         })
-        let img = <img
-            src={URL.createObjectURL(theFile)}
-            style={ {width:"100%"} }
-        />
-        this.addMsg(img, true)
+        // let img = <img
+        //     src={URL.createObjectURL(theFile)}
+        //     style={ {width:"100%"} }
+        // />
+        // this.addMsg(img, true)
         this.scrollToBottom()
     }
 
